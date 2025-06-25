@@ -15,7 +15,7 @@ export default async function handler(
 ) {
   try {
     const client = await clientPromise;
-    const db = client.db("elearningIqbal");
+    const db = client.db("elearning");
 
     if (req.method === "GET") {
       const allPosts = await db.collection("kursus").find({}).toArray();
@@ -38,6 +38,7 @@ export default async function handler(
       status: 500,
       data: [],
       message: 'Terjadi kesalahan saat mengambil data',
+      error: error, // Tambahkan ini
     });
   }
 }

@@ -1,6 +1,5 @@
 // lib/mongodb.js
 import { MongoClient } from "mongodb";
-import { version } from "os";
 
 const uri = process.env.MONGODB_URI; // ex: mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
 const options = {
